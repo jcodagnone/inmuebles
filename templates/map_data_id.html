@@ -1,0 +1,20 @@
+$def with (properties, id, providerName)
+<table>
+$for i in properties.iteritems():
+    <tr> <th>$i[0]</th><td>$i[1]</td></tr>
+</table>
+
+$if providerName == 'clarin':
+    <a href="http://www.inmuebles.clarin.com/inm/verAviso.do?idAviso=$id">Ir a pagina de clarin...</a> 
+$else:
+    $if providerName == 'todopropiedades':
+        <a href="http://www.todopropiedades.com/respuesta_propmasinfo.phtml?codinmob=$id.split('-')[0]&codprop=$id.split('-')[1]&archivo=respuesta_propmasinfo12.shtml">Ir a pagina de todopropiedades....</a> 
+    $else:
+        $if providerName == 'argenprop':
+            <a href="http://websinmob.argenprop.com.ar/buscador/masdatos.asp?idpropiedad=$id&sqllook=I">Ir a pagina de argenprop...</a> 
+        $else:
+            $if providerName == 'flof':
+                <a href="http://flof.com.ar/bin/spot/geoinfo/$id/">Ir a pagina de flof...</a> 
+
+||
+<a href="/places/$providerName/$id/">Ir a pagina local...</a>

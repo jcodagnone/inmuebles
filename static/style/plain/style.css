@@ -1,0 +1,600 @@
+/* CSS Document */
+
+body {
+	margin:0;
+	font-size:small;
+	font-family:"Trebuchet MS", Arial, Verdana;
+	color:#555555;
+	background-color:#FFFFFF;
+	text-align:left;
+}
+
+.error {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border-width: 1px;
+  background: url(img/error.png) no-repeat 0 0;
+  padding-left: 45px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: red;
+}
+
+.errorNoImg {
+  color: red;
+}
+
+
+.notice {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1; 
+  border-width: 1px;
+  background: url(img/warning.gif) no-repeat 0 0;
+  padding-left: 45px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #f63;
+}
+
+.mapaContainer {
+	width: 70%;
+	margin-left: 8px;
+	margin-bottom: 10px;    
+	margin-top: 0px;
+	margin-top: 0;
+}
+
+.embedMapContainer {
+	margin-left: 0px;
+	margin-bottom: 0px;    
+	margin-top: 0px;
+	margin-top: 0;
+}
+
+.banner { position: absolute; display: none; top: 3px; right: 3px; }
+.abanner { color: #d71a1a; font-size:14px; font-weight: bold; text-decoration:none; }
+
+.hidden {
+	/* visibility: hidden; */ /* Doesn't remove the element from rendering flow */
+	display: none;  /* Removes the element from rendering flow */
+}
+
+.hiddenKeepSpace {
+	visibility: hidden;    /* Doesn't remove the element from rendering flow */
+}
+
+/* copia vil de <a> */
+.selectSpan {
+	color:#4D87CE;
+	font-weight:bold;
+	text-decoration:none;
+
+	cursor: pointer;
+}
+
+.activeSelectSpan {
+	color:red;
+	font-weight:bold;
+	text-decoration:none;
+	cursor: pointer;
+}
+.selectSpan:hover {
+	color:#2a65ad;
+	font: em;
+}
+
+a {
+	color:#4D87CE;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover {
+	color:#2a65ad;
+	text-decoration: underline;
+}
+
+
+.popular {
+	width: 30%;
+	font-size:95%;
+	color:#6C534A;
+	text-align:left;
+	padding: 0 7% 0 7%;
+}
+
+.login_recent {
+	width:40%;
+	position: absolute;
+	right: 0%;
+	top: 125px;
+	font-size:95%;
+	color:#6C534A;
+	text-align:left;
+	padding: 20px 10% 0 0%;
+}
+
+.mainLogin {
+	font-size:95%;
+	color:#6C534A;
+	font-size:95%;
+	color:#6C534A;
+	margin: 0 0 20px 0;
+	width: 80%;
+}
+
+
+.mapaResult {
+	width: 26%;
+	font-size:95%;
+	color:#6C534A;
+	text-align:left;
+	vertical-align: 0;
+	right: 0;
+	top: 53px;
+	position: absolute;
+	font-size:95%;
+	color:#6C534A;
+	overflow: auto;
+	padding: 0 10px 0 0;
+}
+
+
+.mapaResult h1 {
+	font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:20px;
+	text-transform:uppercase;
+	font-weight:normal;
+	border-bottom:1px solid #eeeeee;
+	color:#728c40;
+	text-align:right;
+}
+
+#footer {
+	width:100%;
+	background-color:#94af62;
+	/*border-top:1px solid #94ae62;*/
+	border-bottom:5px solid #d8efa6;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#FFFFFF;
+	text-align: center;
+}
+#footer a {
+	color:#006600;
+}
+#footer a:hover {
+	color:#009900;
+}
+
+#menu {
+	width:100%;
+	padding-top:0px; /* antes estaba en 20px */
+	/* padding-bottom:20px; */
+	height: 55px;
+	 margin-bottom:10px;
+	color:#000000;
+	text-align:center;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	/* font-variant:small-caps;*/
+	background-image:url(img/backgrounds/menu.jpg);
+}
+
+#menu a, #footer a {
+	color:#FFFFFF;
+	text-decoration:none;
+	padding-left:10px;
+	padding-right:10px;
+/*	padding-top:20px;
+	padding-bottom:20px; */
+}
+
+#menu a[id="newFeature"] {
+	color: #EDFF2D;
+}
+
+#menu a:hover, #footer a:hover {
+	color:#009900;
+}
+
+
+#menuSearch {
+	position: absolute;
+	top: 5px;
+	right: 4%;
+	text-align: right;
+}
+
+#menuBar {
+	position: absolute;
+	top: 38px;
+	right: 4%;
+	text-align: right;
+}
+	
+#header {
+	width:720px;
+	margin:0 50px 0 50px;
+	margin-bottom:40px;
+}
+#header h1 {
+	font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size: xx-large;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:5px;
+	color:#736451;
+	text-align:left;
+}
+#header h2 {
+	font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:18px;
+	/*text-transform:uppercase;*/
+	padding-left: 45px;
+	text-align:left;
+	font-weight:normal;
+	color:#000000;
+	border-bottom:1px solid #eeeeee;
+	width: 250px; /* este valor tiene que ser igual al de header p */
+	margin: 5px 0 0 0;
+}
+
+#header p {
+	font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	padding-left: 70px;
+	text-align: justify;
+	font-weight:normal;
+	width: 250px;
+	margin: 0
+}
+
+input, textarea {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#ffffff;
+	border:1px solid #728c40;
+	background-color:#b6cf84;
+	padding:3px;
+	margin-bottom:2px;
+}
+
+#textareaEmbed {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#ffffff;
+	border:1px solid #728c40;
+	background-color:#000000;
+	padding:3px;
+	margin-bottom:2px;
+}
+
+input[type=submit], input[type=reset] {
+	background-color:#FFFFFF;
+	/* padding:3px; */
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#666666;
+	border:1px solid #728c40;
+	/* margin-bottom:2px; */
+}
+
+.submitButton {
+	background-color:#FFFFFF;
+	/* padding:3px; */
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#666666;
+	border:1px solid #728c40;
+	/* margin-bottom:2px; */
+}
+
+.tool {
+	background-color:#FFFFFF;
+	padding:3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#4D87CE;
+	border:1px solid #d8efa6;
+	font-weight:bold;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+
+/* Fonts de distinto size por popularidad de label */
+.ls0 { font-size: 10px; }
+.ls1 { font-size: 15px; }
+.ls2 { font-size: 20px; }
+.ls3 { font-size: 25px; }
+.ls4 { font-size: 30px; }
+.ls5 { font-size: 35px; }
+
+
+/* TODO: ver como componer sin repetir */
+.selectLs0 { font-size: 10px; color:#4D87CE; font-weight:bold; text-decoration:none; cursor: pointer;}
+.selectLs1 { font-size: 13px; color:#4D87CE; font-weight:bold; text-decoration:none; cursor: pointer;}
+.selectLs2 { font-size: 16px; color:#4D87CE; font-weight:bold; text-decoration:none; cursor: pointer;}
+.selectLs3 { font-size: 19px; color:#4D87CE; font-weight:bold; text-decoration:none; cursor: pointer;}
+.selectLs4 { font-size: 22px; color:#4D87CE; font-weight:bold; text-decoration:none; cursor: pointer;}
+.selectLs5 { font-size: 25px; color:#4D87CE; font-weight:bold; text-decoration:none; cursor: pointer;}
+.selectLs0:hover { color:#2a65ad; };
+.selectLs1:hover { color:#2a65ad; };
+.selectLs2:hover { color:#2a65ad; };
+.selectLs3:hover { color:#2a65ad; };
+.selectLs4:hover { color:#2a65ad; };
+.selectLs5:hover { color:#2a65ad; };
+
+
+ol,ul {
+
+}
+
+li {
+	/* list-style-image:url(img/backgrounds/li.gif); */
+	line-height:20px;
+	text-align:left;
+}
+
+#sidebar {
+	width:160px;
+	float:right;
+	font-size:95%;
+	color:#6C534A;
+	text-align:left;
+}
+#sidebar h1 {
+	font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:20px;
+	text-transform:uppercase;
+	font-weight:normal;
+	border-bottom:1px solid #eeeeee;
+	color:#728c40;
+	text-align:right;
+}
+
+.contenido {
+	/* width:720px; */
+	margin:0 2% 0 2%;
+	
+}
+
+#license {
+	padding-bottom: 	2%;
+}
+
+.spotsLabels {
+	width: 64%;
+}
+div.spotsLabels p{
+	text-align: justify;
+}
+
+.labels {
+	width: 18%;
+	font-size:95%;
+	color:#6C534A;
+	text-align:left;
+	vertical-align: 0;
+	position: absolute;
+	right: 1%;
+	top: 63px;
+	
+	border: dashed 1px;
+	padding-left: 5px;
+	
+}
+
+
+/* tour*/
+div.tour {
+	width:  100%;	
+}
+
+div.tour_img {
+	float: left;	
+	width:  55%;
+}
+
+div.tour_description  {
+	float: right;	
+	width:  30%;	
+	padding: 0px 10px 0px 10px;
+	border: dashed 10px;
+}
+
+div.tour_description p {
+	text-align: justify;	
+	font-size: 150%;
+}
+div.tour_description li {
+	text-align: justify;
+	font-size: 150%;	
+}
+
+div.tournav {
+	clear: both;
+	text-align: center;
+	padding: 30px 0 0px 0;
+}
+/********************************************/
+div.findTownInput {
+  position:absolute;
+  width:250px;
+  background-color:white;
+  border:1px solid #888;
+  margin:0px;
+  padding:0px;
+}
+div.findTownInput ul {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+div.findTownInput ul li.selected { background-color: #ffb;}
+div.findTownInput ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  height:32px;
+  cursor:pointer;
+
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ * CSS Para Tablas de Reportes
+ */
+ 
+.reportTable {
+	border: medium;
+}
+
+.even {
+	background-color: rgb(225, 239, 194);
+}
+
+.odd {
+	background-color: rgb(183, 207, 133);
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+/* ESTO NO SE USA
+ */
+
+#content {
+	width:720px;
+	margin:0 auto 0 auto;
+	text-align:left;
+	
+}
+
+.introduction {
+	font-family:Helvetica, Arial, sans-serif;
+	line-height:20px;
+	font-size:12px;
+	color:#99B198;
+	text-indent:25px;
+	background-image:url(img/backgrounds/desc.jpg);
+	background-position:bottom left;
+	padding-left:0;
+	padding-right:100px;
+	padding-bottom:35px;
+	padding-top:0;
+	background-repeat:no-repeat;
+	
+}
+#logo {
+	position: static;
+	top: 0px;
+    font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size: xx-large;
+	/* text-transform:uppercase; */
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-left:10px;
+	color:#736451;
+	text-align:left;
+}
+
+#tagline {
+	top: 38px;
+	left: 1%;
+	position: absolute;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+	
+.clearer {
+	clear:both;
+}
+
+.labelSelected, .selectedSuggestion {
+	background-color:#0000FF;
+	color:#FFFFFF;
+}
+
+.labelNotSelected, .suggestion {
+	background-color:#eeeeee;
+	color:#0000FF;
+}
+
+.suggestDiv {
+	font-size: 13px;	
+}
+
+.submenu {
+}
+.submenu a {
+	display:block;
+	width:100%;
+	background-image:url(img/backgrounds/submenua.gif);
+	background-position:right;
+	background-repeat:no-repeat;
+	padding:5px;
+	padding-right:0;
+}
+.submenu a:hover {
+	background-color:#eeeeee;
+	background-image:url(img/backgrounds/submenua_hover.jpg);
+	background-repeat:repeat-y;
+}
+#mainbar {
+	margin-right:185px;
+	padding-right:35px;
+	background-image:url(img/backgrounds/mainbar.jpg);
+	background-position:top right;
+	background-repeat:no-repeat;
+}
+
+#mainbar h1 {
+	font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size: 25px;
+	text-transform:uppercase;
+	font-weight:normal;
+	border-bottom:1px solid #eeeeee;
+	color:#728c40;
+}
+
+#mainbar p {
+	padding:15px;
+	line-height:20px;
+}
+
+#mainbar .articleimg {
+	float:right;
+	padding:5px;
+	border:1px solid #eeeeee;
+	margin-left:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.feature {
+	width:600px; 
+	text-align: justify;
+}
+
+.dojoDialog {
+		background : #eee;
+		border : 1px solid #999;
+		-moz-border-radius : 5px;
+		padding : 4px;
+}
+
+#map {
+    width: 100%;
+    height: 512px;
+    border: 1px solid black;
+}
+
+

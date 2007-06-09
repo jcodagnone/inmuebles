@@ -1,0 +1,8 @@
+$def with (provider, id)
+<script type="text/javascript" src="/static/js/gmap.js?v=0"></script>
+<script type="text/javascript" src="/static/js/code.js?v=0"></script>
+$if provider == None:
+    <script type="text/javascript" src="data/"></script>
+$else:
+    <script type="text/javascript" src="/map/data/$provider/$id/js/"></script>
+<div id="map"></div>

@@ -1,0 +1,62 @@
+$def with (properties, comments, providerName, id)
+
+<h1>Propiedad $providerName-$id</h1>
+
+Estado Zauber: $properties['ESTADO_ZAUBER']
+<p>
+$if providerName == 'clarin':
+    <a href="http://www.inmuebles.clarin.com/inm/verAviso.do?idAviso=$id">Ir a pagina de clarin...</a> 
+$else:
+    $if providerName == 'todopropiedades':
+        <a href="http://www.todopropiedades.com/respuesta_propmasinfo.phtml?codinmob=$id.split('-')[0]&codprop=$id.split('-')[1]&archivo=respuesta_propmasinfo12.shtml">Ir a pagina de todopropiedades....</a> 
+    $else:
+        $if providerName == 'argenprop':
+            <a href="http://websinmob.argenprop.com.ar/buscador/masdatos.asp?idpropiedad=$id&sqllook=I">Ir a pagina de argenprop...</a> 
+        $else:
+            $if providerName == 'flof':
+                <a href="http://flof.com.ar/bin/spot/geoinfo/$id/">Ir a pagina de flof...</a> 
+|| <a href='/map/$providerName/$id/'>Ver en el mapa</a>
+</p>
+
+
+<h2>Datos raw</h2>
+<table>
+$for i in properties.iteritems():
+    <tr> <th>$i[0]</th><td>$i[1]</td></tr>
+</table>
+
+<h2>Comentarios</h2>
+<ul>
+$for i in comments:
+    <li>El $i.date, <strong>$i.owner</strong> escribió: <br/>
+    $i.description
+    </li>
+</ul>
+
+
+<h2>Acciones</h2>
+<h3>Agregar un nuevo comentario</h3>
+<form action='comment/' method='POST'>
+    <textarea  tabindex="10" rows="4" cols="77" name='description'"/></textarea>
+    <br/>
+    <input type='submit' value='agregar comentario'/>
+</form>
+
+<h3>Estado</h3>
+<form method="POST" action="state/IMPORTADO/">
+    <input type="submit" value="Cambiar el estado a RECIEN IMPORTADO" />
+</form>
+<form method="POST" action="state/POSIBLE/">
+    <input type="submit" value="Cambiar el estado a POSIBLE" />
+</form>
+<form method="POST" action="state/NO DISPONIBLE/">
+    <input type="submit" value="Cambiar el estado a NO DISPONIBLE" />
+</form>
+
+<h3>Otras</h3>
+
+<form method="POST">
+    <input type="submit" value="borrar de la base local" />
+</form>
+
+

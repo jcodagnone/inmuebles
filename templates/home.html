@@ -1,0 +1,90 @@
+<script>
+function onSubmitSimple(form, provider, checkInt) {
+    var a = parseInt(form.id.value)
+    var ret;
+
+    if(checkInt && isNaN(a)) {
+        alert('debe escribirse un numero entero');
+        form.id.focus();
+        ret = false;
+    } else {
+        if(form.id.value == '') {
+           alert('debe escribirse algo');
+           form.id.focus();
+           ret = false;
+
+        } else {
+            form.action = '../places/' + provider + '/' + form.id.value + '/';
+            form.method = 'GET';
+            ret = true;
+        }
+    }
+    return ret;
+}
+
+function onSubmitTodo(form) {
+    var a = parseInt(form.inm.value)
+    var b = parseInt(form.prop.value)
+    var ret;
+
+    if(isNaN(a) || isNaN(b)) {
+        alert('debe escribirse un numero entero');
+        if(isNaN(a)) {
+            form.inm.focus();
+        }
+        if(isNaN(b)) {
+            form.prop.focus();
+        }
+        ret = false;
+    } else {
+        form.action = '../places/todopropiedades/' + a + '-' + b + '/';
+        form.method = 'GET';
+        ret = true;
+    }
+    return ret;
+}
+
+</script>
+
+<h1>Herramienta para recopilar datos sobre inmuebles en alquiler</h1>
+<table>
+<ul>
+  <tr>
+    <form onsubmit="javascript:return onSubmitSimple(this, 'clarin', true)" method="POST" >
+     <td> Agregar propiedad de clarin inmuble con id</td><td><input type="text" name="id" size="8" /></td>
+     <td><input type="submit" value="agregar"/></td>
+     <td>por ejemplo <em>1380432</em></td>
+   </form>
+  </tr>
+  <tr>
+   <form onsubmit="javascript:return onSubmitTodo(this)" method="POST" >
+     <td>Agregar propiedad de todopropiedades con #inmobiliaria</td>
+      <td> <input type="text" name="inm" size="8" /> #prop  <input type="text" name="prop" size="8" /> </td>
+      <td><input type="submit" value="agregar"/></td>
+      <td>por ejemplo <em>135 15082</em></td>
+   </form>
+  </tr>
+  <tr>
+   <form onsubmit="javascript:return onSubmitSimple(this, 'argenprop', false)" method="POST" >
+     <td>Agregar propiedad de argenprop con id</td>
+     <td> <input type="text" name="id" size="8" /></td>
+     <td> <input type="submit" value="agregar"/></td>
+     <td>por ejemplo <em>BW38037</em></td>
+
+   </form>
+  <tr>
+   <form onsubmit="javascript:return onSubmitSimple(this, 'flof', true)" method="POST" >
+     <td>Agregar propiedad de flof con id</td>
+     <td> <input type="text" name="id" size="8" /></td>
+     <td> <input type="submit" value="agregar"/></td>
+     <td>por ejemplo <em>6479</em></td>
+   </form>
+
+  </tr>
+</table>
+
+<h2>Otras acciones</h2>
+<ul>
+  <li><a href='../places/'>Ver Lista de lugares agregados, pendientes</a></li>
+</ul>
+

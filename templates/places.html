@@ -1,0 +1,6 @@
+$def with (properties)
+<table>
+$for i in properties:
+    <tr> <td>$i.date</td><td><a href="$i.provider/$i.providerid/">Ver
+    detalle</a></td><td>$i.provider-$i.providerid</td><td>$i.state</td></tr>
+</table>

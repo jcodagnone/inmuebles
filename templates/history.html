@@ -1,0 +1,6 @@
+$def with (properties)
+<table>
+    <tr><th>cuando</th><th>quien</th><th>que</th></tr>
+$for i in properties:
+    <tr> <td>$i.date</td><td>$i.owner</th><td>$i.description</td></tr>
+</table>
